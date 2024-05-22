@@ -8,6 +8,11 @@ const LocalStrategy = require("passport-local").Strategy;
 
 const userController = require("../controllers/users.js");
 
+
+router.get("/", (req,res) =>{
+  res.redirect("/listings");
+});
+
 //1.SignUp Route
 router.route("/signup")
 .get(userController.signUpForm )
